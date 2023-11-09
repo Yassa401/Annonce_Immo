@@ -1,0 +1,543 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@100;200;400;500&display=swap');
+
+*{
+    font-family: 'Raleway', sans-serif;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+:root {
+   --background: url(images/img_principale.jpg) no-repeat center/cover;
+ }
+ 
+header{
+    margin: auto;
+    width: 90%;
+    height: 85vh;
+    transition: .3s linear;
+    
+
+}
+
+header nav {
+    margin: 5px auto;
+    width:100%;
+    height:7%;
+    justify-content: space-between;
+    align-items: center;
+    display: flex;    
+}
+
+header nav .elements {
+    display: flex;
+    align-items: center;
+}
+
+header nav .elements ul {
+    display: flex;
+    list-style: none;
+    align-items: center;
+}
+    
+
+header nav .elements ul li {
+    display: flex;
+    padding: 3px 15px;          /*gerer la liste en general */
+    align-items: center;
+    
+}
+
+header nav .elements ul li a { 
+   font-style: 12px;
+   font-weight: 500;
+   color: #000;
+   transition: .3s linear;     /*gerer le contenu de la liste */
+   text-decoration: none; 
+   
+   
+}
+
+header nav .elements ul li a:hover {      
+    color: #2882ff;
+ }
+
+.account {
+    display: flex;
+    align-items: center;
+    margin-left: 20px;
+    color: #000;;
+ }
+
+ /* feuile de style pour le menu  */
+
+#menu-utilisateur {
+    display: none ;
+ }
+
+.account a {
+   padding-left : 5px ;
+}
+
+.account a:hover {
+     color: #2882ff;
+ }
+
+
+ .contenu {
+    position: relative;
+    width: 100%;
+    height: 93%;
+    z-index: 5;
+ }
+
+ .contenu::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: var(--background);
+    opacity: 0.9;
+    background-position-y: 0px;
+    transform:scaleX(-1);
+    border-radius: 20px;
+    z-index: -1;
+   
+ }
+
+  .illustre {
+   width: 500px;
+    height: auto;
+    color: white;
+    font-weight: bold;
+    padding: 50px;
+ }
+
+  .illustre h1 {
+   font-size: 55px;
+   line-height: 60px ;
+   font-weight: 600;
+  }
+
+  .illustre p { 
+    font-size: 13px;
+    font-weight: 450;
+    margin-top: 8px;
+   }
+
+   header .contenu .swiper {
+    color:white;
+    margin-top: 8px;
+    margin-left: 55px;
+    margin-bottom: 50px;
+    
+   }
+
+   header .contenu .swiper i{
+    border: 1px solid white;
+    transition: .3s linear;
+    cursor: pointer;
+    padding: 0px 3.5px;
+    border-radius: 50%;
+   }
+
+   header .contenu .swiper i:hover {
+    color: #2e0202 ;
+    background: rgb(0,0,0, .1);    
+   }
+
+header .contenu .vers {
+    position: absolute;
+    right: 20px;
+    top: 40px;
+    width: 50px;
+   
+}
+
+
+  .carton {
+    position: relative;
+    width: 100%;
+    height: 50px;
+    margin-top: 10px;
+    padding: 5px;
+    border-radius: 8px;
+}
+
+.carton img {          
+    width: 100%;
+    height: 100%;
+    border-radius: 8px;
+}
+
+.carton h6 {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    font-size: 14px;
+    color: #fff;
+}
+
+
+.choix-client{
+   
+    position: absolute;
+    width: 50%;
+    height: auto ;
+    margin: auto;
+    bottom: 180px;
+    margin-left: 40px;
+}
+
+.choix-client .btn_haut{
+   display: flex;
+   align-items: center;
+}
+
+
+.choix-client .btn_haut button{
+    padding: 15px 45pX;
+    background: #1f2e4a;
+    color: white;
+    border:none;
+    outline: none;
+    cursor: pointer;
+    transition: .3s linear;
+ }
+
+  .choix-client .btn_haut button:hover{
+    background: white;
+    color: black; /*couleur que le texte aura*/
+ }
+
+
+ .btn_haut button:nth-child(1){
+    border-radius: 10px 0px 0px 0px;
+    background: #1f2e4a ;                     /*faire en sorte qu'il redevienne bleu quand on clique plus dessus*/
+    color: white;
+ }
+
+ .btn_haut button:nth-child(2){
+    border-radius: 10px 0px 0px 0px;     
+    background: #1f2e4a;
+    color: white;
+ }
+
+ .btn_haut button:nth-child(2){
+    border-radius: 0px 10px 0px 0px;
+    background: #1f2e4a;                  /*faire en sorte qu'il devienne blanc quand on clique dessus*/
+    color: white;
+ }
+
+
+
+.parent {
+   position: relative;
+ }
+ 
+ .selection {
+   
+   width: 100%;
+   background: #fff;
+   border-radius: 0px 10px 10px 10px;
+   padding: 3px 3px 153px 3px ;
+   box-shadow: 0px 5px 15px -6px rgb(49, 48, 48);
+   z-index: 2;
+   display: flex;
+   flex-direction: column;
+   position: absolute;
+   top: 3px;  
+ } 
+ 
+ /* ajuster la hauteur en fonction du contenu */
+ .selection.auto-height{
+   height: auto;
+   max-height: 20em ; 
+   overflow-y: auto; 
+  
+ }
+ 
+ 
+ .selection-info {
+   flex-grow: 1;
+ }
+ 
+ .info .titre {
+   margin-top: 0;
+   margin-bottom: 0.5 em;  
+ }
+ 
+ .loc,
+ .type-biens,
+ .budget, 
+ .chambre,
+ .surface
+ {
+   margin-bottom: 6px;
+ }
+ 
+  .text1,
+  .text2,
+  .text3,
+  .text4,
+  .text5 {
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    width: auto;
+    font-size: 1.1rem;                  
+    box-sizing: border-box;
+    max-width: 100%; 
+ }
+                                     
+ .type-biens,
+ .budget,
+ .surface,
+ .chambre{
+    margin-top: 20px;
+ }
+
+ .rechercher_btn {
+   font-size: 1.1em;
+   transition: font-size 0.3s ease-in-out;
+   margin-top: 1em;
+   margin-left: 0.2em;
+   
+}   
+
+ 
+
+
+
+
+
+ .main_bas {
+   position: relative;
+   width: 100%;
+   height: 260px;
+   margin: auto;
+   top: 4em; 
+   z-index: 2;
+} 
+
+.titre_main {
+   margin-top: 7px;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+}
+
+.titre_main button{
+   position: absolute;
+   right: 0;
+   padding: 8px 15px;
+   background: gray;
+   color: #fff;
+   box-shadow: 3px 3px 25px rgb(233, 233, 233);
+   border: none;
+   outline: none;
+   font-weight: 600;
+   font: 12px;
+   cursor: pointer;
+   transition: .3s linear;
+}
+
+
+.titre_main button:hover{
+background: #000;
+color: #fff;
+}
+
+.titre_main button.bi {
+   margin-left: 5px;
+}
+
+.main_img {
+   width: 100%;
+   margin-top: -120px; 
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+}
+
+.main_img .carton{
+   position: relative;
+   margin-left: 30px;
+    width: 180px;
+    height: 260px;
+    border-radius: 15px;
+   
+}
+
+  .carton img {  /* pour rapetisser les images qu'on va coller, a verifier si c'est la  taille qu'on veut*/
+   width: 100%;
+   height: 100%;
+   border-radius: 15px;
+}
+
+ .conten_haut  {
+   position: absolute;
+   top: 0.5em;
+   left: 9.5em;
+   width: 100%;
+   height: 100%;
+   border-radius: 20px;
+   z-index: 999;
+}
+
+ .conten_haut .bi {
+   position: absolute;
+   right: 15px;
+   top: 10px;
+   color: #fff;
+}
+
+ .conten_haut .bi::after {
+   content: '';
+   position: absolute;
+   width: 165%;
+   height: 110%;
+   background: rgba(33, 31, 31, 0.3);
+   left: -35%;
+   top: -3px;
+   border-radius: 50%;
+   z-index: -1;
+}
+
+ .description {
+   position: absolute;
+   right: 9.5em;
+   bottom: 0;
+   width: 100%;
+   height: 20%;
+}
+
+.description::before {     /* ajoute un arrière-plan flou */
+   content: '';
+   position: absolute;
+   width: 100%;
+   height: 100%;
+   background: rgb(245, 245, 245, .1);
+   backdrop-filter: blur(5px);
+   border-radius: 0px 0px 13px 13px;
+   z-index: -1;
+}
+
+.description h4 {
+   color:   #fff;
+   padding: 10px 0px 0px 15px;
+   line-height: 5px;
+
+}
+
+.description p {
+   color: #fff;
+   padding: 10px 0px 0px 15px;
+   line-height: 5px;
+
+}
+
+section {
+   position: absolute;
+   width: 100%;
+   height: auto;
+   margin-top: 5em;
+}
+
+section h2 {
+   text-align: center;
+}
+
+section .box {
+   width: 100%;
+   margin: auto;
+   margin-top: 50px;
+   display: flex;
+}
+
+ .img_bx, .cont_box {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.img_bx img {
+   width: 85%;
+   border-radius: 5px;
+}
+
+ .cont_box {
+   flex-direction: column;
+   align-items: flex-start;
+}
+
+ .cont_box h6 {
+   position: relative;
+}
+
+ .cont_box h6 span {
+   margin-left: 25px;
+}
+
+ .cont_box h6::before {
+   content: '';
+   position: absolute;
+   width: 20px;
+   height: 1.5px;
+   background: rgb(136, 136, 136);
+   top: 7px;
+}
+
+ .cont_box h1 {
+   font-weight: 600;
+   margin: 10px 0px;
+}
+
+.cont_box p {
+   font-size: 12px;
+}
+
+ .cont_box ul {
+   list-style-type: none;
+   flex-wrap: wrap;
+   margin-left: 20px;
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+}
+
+ .cont_box ul li {
+   position: relative;
+   font-size: 13px;
+   font-weight: bold;
+   width: 200px;
+   margin-top: 20px;
+}
+
+ .cont_box ul li::before {
+   content: '';
+   position: absolute;
+   width: 5px;
+   height: 5px;
+   background: skyblue;
+   border-radius: 50%;
+   left: -20px;
+   top: 8px;
+}
+
+footer {
+   width: 100%;
+   height: 10em;
+   display: flex; 
+   align-items: center;
+   justify-content: center; 
+   background: #000;
+   margin-top: 50px;
+}
+
+footer h4 {
+   color: #fff;
+}
+footer h4 .bi {
+   margin-right: 5px;
+} 

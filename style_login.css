@@ -1,0 +1,108 @@
+*{
+    font-family: 'Raleway', sans-serif;
+    color : blue ;
+}
+body {
+    margin: 0;
+    padding: 0;
+}
+  
+  
+.boxx {
+border: 1px solid #ccc;
+padding: 20px;
+margin: 20px;
+border-radius: 10px;
+box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+
+.boxx h3 {
+font-size: 24px;
+margin: 0;
+}
+
+
+.boxx p {
+font-size: 18px;
+margin: 0;
+}
+
+.boxx img {
+float: left;
+width: 160px;
+border-radius: 50%;
+}
+
+
+
+
+ul {
+list-style-type: none;
+margin: 0;
+padding: 0;
+}
+
+/* Style pour les éléments de la liste des annonces */
+li {
+display: flex;
+border: 1px solid #ccc;
+padding: 20px;
+margin: 20px;
+border-radius: 10px;
+box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+
+li img {
+width: 200px;
+height: auto;
+margin-right: 20px;
+}
+
+
+li h2 {
+font-size: 24px;
+margin: 0;
+}
+
+/* Style pour la description de l'annonce */
+li p {
+font-size: 18px;
+margin: 0;
+}
+  
+
+.box {
+    text-align : center ;
+    width : auto ;
+    margin : 1em 25% ;
+    border : 0.3rem solid salmon ;
+    border-radius : 15% ;
+    padding : 1.2em ;
+}
+
+.box label, .box input{
+    text-align : left ; 
+    padding : 1em ;
+}
+
+.box h3{
+    text-align : left ;
+    margin : 0 ;
+}
+
+div.textfield{
+    padding : 0.3rem ;
+    display : inline-flex ; 
+    text-align : left ;
+}
+
+button {
+    border-radius : 10px ;
+    padding : 0.7rem ;
+    font-size : 20px ;
+    background : #1f2e4a ;   
+    color : white ;
+}
+
