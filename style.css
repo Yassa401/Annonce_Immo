@@ -5,10 +5,12 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+    cursor: default;
 }
 :root {
    --background: url(images/img_principale.jpg) no-repeat center/cover;
- }
+   max-width: 100% ;
+}
  
 header{
     margin: auto;
@@ -20,7 +22,7 @@ header{
 }
 
 header nav {
-    margin: 5px auto;
+    margin: 1em auto;
     width:100%;
     height:7%;
     justify-content: space-between;
@@ -62,33 +64,71 @@ header nav .elements ul li a:hover {
  }
 
 .account {
-    display: flex;
-    align-items: center;
-    margin-left: 20px;
-    color: #000;;
- }
-
- /* feuile de style pour le menu  */
-
-#menu-utilisateur {
-    display: none ;
- }
-
-.account a {
-   padding-left : 5px ;
+   display: flex;
+   align-items: center;
+   margin-left: 20px;
+   color: #000;;
 }
 
 .account a:hover {
-     color: #2882ff;
+   color: #2882ff;
+}
+
+ /* feuile de style pour le menu  */
+
+#user{
+   margin:10px;
+   padding:5px;
+}
+
+
+#menu-utilisateur {
+    display: none;
+    position:absolute ;
+    z-index: 6;
+    float: none;
  }
 
+ #menu-utilisateur:hover {
+   display: block;
+ }
 
- .contenu {
+#menu-utilisateur ul {
+   display: block ;
+   position: absolute;
+   float: none;
+   left: -10px;
+   margin-top: 1.2em;
+   padding: 10px 0 0 0;
+   background-color: inherit;
+   border-style: solid;
+   border-radius: 5px;
+}
+
+#menu-utilisateur li{
+   display: block;
+   float: left;
+   padding: 7px;
+   margin: 3px 3px;
+   width:95%;
+   border-radius: 2px;
+}
+
+#menu-utilisateur li:hover{
+   background-color: #f5f1f1;
+}
+
+#menu-utilisateur li a{
+   width: 160px;
+}
+
+
+.contenu {
     position: relative;
     width: 100%;
-    height: 93%;
+    height: 100%;
     z-index: 5;
- }
+}
 
  .contenu::before {
     content: '';
@@ -239,7 +279,7 @@ header .contenu .vers {
    width: 100%;
    background: #fff;
    border-radius: 0px 10px 10px 10px;
-   padding: 3px 3px 153px 3px ;
+   padding: 1em ;
    box-shadow: 0px 5px 15px -6px rgb(49, 48, 48);
    z-index: 2;
    display: flex;
@@ -251,7 +291,7 @@ header .contenu .vers {
  /* ajuster la hauteur en fonction du contenu */
  .selection.auto-height{
    height: auto;
-   max-height: 20em ; 
+   max-height: 15em ; 
    overflow-y: auto; 
   
  }

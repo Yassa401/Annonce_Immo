@@ -56,6 +56,7 @@ session_start() ;
     <header>
         <?php include("header.php") ; ?> 
         <div class="contenu">
+            
             <div class="illustre">
                  <h1>Demain<br> Commence Ici</h1>
                  <p>N'hesitez Plus,  Choissisez Votre Coup De Coeur</p>
@@ -65,17 +66,17 @@ session_start() ;
                 <i class='bx bx-right-arrow-alt' id="btn-droite"></i>  
             </div>
 
-            <form method="get">
-            <div class="choix-client">
+        <form method="get">
+            <!-- <div class="choix-client">
                 <div class="btn_haut">
                     <button type="button" id="acheter" onclick="boutonClique(this)" name="page" value="acheter" >Acheter</button>    
                     <button type="button" id="louer" onclick="boutonClique(this)" name="page" value="louer">Louer</button>
-                    <input type="hidden" name="choix"  id="choix" value="">
+                    <input type="hidden" name="choix"  id="choix" value=""> 
                 </div>
-         <div class="parent">
-             <div class="selection auto-height">
+        <div class="parent">
+                <div class="selection auto-height">
                   
-                <div class="selection">
+                
                         <div class="info">
                             <h4 class="titre">Où Cherchez-Vous ?</h4>
                             <h5 class="loc">LOCALITÉS</h5>
@@ -116,25 +117,10 @@ session_start() ;
                             <button id="rech_btn" name="rech_btn" class="rechercher_btn" type="submit" value="rechercher"> Rechercher</button>
                            
                         </div>
-                </div>
-            </div> 
-         </div>
-        </form>
-    </div>       
-             <div class="vers">
-                <div class="carton">
-                    <img src="images/cuisine.jpg" alt="image1">  
-                </div>
-                <div class="carton">  
-                     <img src="images/chambre.jpg" alt="image2">
-                </div>
-                <div class="carton">
-                    <img src="images/salon.jpg" alt="image3">
-                    <h6 id="h6">+3</h6>
-                </div> 
+                
             </div>  
-                   
-         </div>
+        </div> -->
+        </form>
     </header>
 
     <div class="main_bas"> 
@@ -146,7 +132,7 @@ session_start() ;
 
     </div>
 
-    <div class="main_img">
+    <!-- <div class="main_img">
         <?php 
         $query = "SELECT * FROM biens_immobiliers, images_biens_immobiliers, ville
                   WHERE biens_immobiliers.id = images_biens_immobiliers.id_bien
@@ -172,7 +158,7 @@ session_start() ;
         </div>
 
         <?php } ?>
-    </div>
+    </div> -->
 <section>
    <h2>Pourquoi Nous Choisir</h2>
    <div class="box">
@@ -196,6 +182,7 @@ session_start() ;
 
 </section>
 
-<script src="script.js"></script>
+<script src="script.js">setInterval(switchImage(),1000);</script>
 
 </body>
+</html>
