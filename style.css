@@ -78,8 +78,26 @@ header nav .elements ul li a:hover {
 
 #user{
    margin:10px;
-   padding:5px;
+   padding:5px 10px;
+   border-radius: 5px;
 }
+
+#user:hover {
+   color: #2882ff;
+   transition: .3s linear;
+}
+
+h1#user::after {
+   content: '';
+   display: inline-block;
+   width: 9px;
+   height: 8px;
+   margin-left: 6px;
+   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='9' viewBox='0 0 10 9' fill='none'%3E%3Cpath d='M8.5 2.5L4.92667 6.073C4.90348 6.09622 4.87594 6.11464 4.84563 6.12721C4.81531 6.13978 4.78282 6.14625 4.75 6.14625C4.71718 6.14625 4.68469 6.13978 4.65437 6.12721C4.62406 6.11464 4.59652 6.09622 4.57333 6.073L1 2.5' stroke='%230D0C22' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+   background-repeat: no-repeat;
+   background-position: center;
+   background-size: 100%;
+ }
 
 
 #menu-utilisateur {
@@ -102,14 +120,15 @@ header nav .elements ul li a:hover {
    padding: 10px 0 0 0;
    background-color: inherit;
    border-style: solid;
+   border-width: 3px;
    border-radius: 5px;
 }
 
 #menu-utilisateur li{
    display: block;
    float: left;
-   padding: 7px;
-   margin: 3px 3px;
+   margin: 3px;
+   padding: 3px 0;
    width:95%;
    border-radius: 2px;
 }
@@ -119,6 +138,7 @@ header nav .elements ul li a:hover {
 }
 
 #menu-utilisateur li a{
+   padding: 7px;
    width: 160px;
 }
 
@@ -343,15 +363,9 @@ header .contenu .vers {
    
 }   
 
- 
-
-
-
-
-
  .main_bas {
    position: relative;
-   width: 100%;
+   width: 90%;
    height: 260px;
    margin: auto;
    top: 4em; 
@@ -367,7 +381,7 @@ header .contenu .vers {
 
 .titre_main button{
    position: absolute;
-   right: 0;
+   right: 0em;
    padding: 8px 15px;
    background: gray;
    color: #fff;
@@ -487,7 +501,7 @@ section h2 {
 }
 
 section .box {
-   width: 100%;
+   width: 95%;
    margin: auto;
    margin-top: 50px;
    display: flex;

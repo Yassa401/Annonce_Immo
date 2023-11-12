@@ -95,7 +95,8 @@ session_start() ;
     <?php /* inclut le même footer pour la page louer.php et acheter.php */ 
       include('footer.php') ;
     ?>
-
+    
+  <script src="script.js"></script>
   </body>
 
 </html>

@@ -11,8 +11,6 @@ if (!isset($_SESSION['user_id'])){
 $pdo = connect() ;
 
 $submit1 = 0 ;
-/* vérifier le formulaire avant d'insérer les informations dans la base de données*/
-formulaire_annonce() ;
 
 ?>
 
@@ -30,7 +28,14 @@ formulaire_annonce() ;
     <title>ImmoHome</title>
 </head>
 <body>
-    
+    <div class="infoFormulaire">
+        <?php 
+        // Vérifie le formulaire avant d'insérer les informations
+        // Renvoie un message d'erreur si formulaire faux
+        // Sinon ajoute l'annonce à la base de données
+        formulaire_annonce() ; 
+        ?>
+    </div>
     <a href="index.php"><button>Accueil</button></a> 
 
     <?php if (! $submit1) : ?>

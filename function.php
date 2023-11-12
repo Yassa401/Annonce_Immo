@@ -158,15 +158,15 @@ function formulaire_annonce(){
         }
         else {
             if (!isset($_POST['type']))
-                echo 'type n\'est pas défini <br>' ;
+                echo 'type n\'est pas défini !<br>' ;
             if (!isset($_POST['surface']))
-                echo 'surface n\'est pas défini <br>' ;
+                echo 'surface n\'est pas défini !<br>' ;
             if (!is_numeric($_POST['surface']))
-                echo 'Veuillez entrer une valeur numérique dans la rubrique surface <br>' ;
+                echo 'Veuillez entrer une valeur numérique dans la rubrique surface !<br>' ;
             if (!isset($_POST['ville']))
-                echo 'ville n\'est pas défini <br>' ;
+                echo 'ville n\'est pas défini !<br>' ;
             if (!isset($_POST['description']))
-                echo 'description n\'est pas défini <br>' ;
+                echo 'description n\'est pas défini !<br>' ;
         }
     }
 }

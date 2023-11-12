@@ -12,7 +12,7 @@
         <div class="account">
             <!-- si utilisateur connecté on affiche son nom et le lien pour se déconnecter !-->
             <?php if (isset($user_data)) :?>
-                <h1 id="user"><?php echo $user_data['user_name'] ; ?> </h1>
+                <h1 id="user"><?php echo $user_data['user_name'] ; ?></h1>
                 <div id="menu-utilisateur">
                     <ul>
                         <li><a href="profil.php">Profil</a></li>
