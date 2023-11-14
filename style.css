@@ -144,7 +144,7 @@ h1#user::after {
    margin: 3px;
    padding: 3px 0;
    width:95%;
-   border-radius: 2px;
+   border-radius: 15px;
 }
 
 #menu-utilisateur .menu-content li:hover{
