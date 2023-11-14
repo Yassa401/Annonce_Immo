@@ -1,4 +1,4 @@
-<!-- <?php
+<?php
 
 session_start();
 include('connexion.php');
@@ -18,7 +18,7 @@ $number = $user['number'] ;
 $nom = $user['nom'] ;
 $prenom = $user['prenom'] ;
 
-?> -->
+?>
 
 
 

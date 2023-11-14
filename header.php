@@ -14,10 +14,14 @@
             <?php if (isset($user_data)) :?>
                 <h1 id="user"><?php echo $user_data['user_name'] ; ?></h1>
                 <div id="menu-utilisateur">
+                    <div class="menu-content">
+                        <div class="sds-container"></div>   
+                    
                     <ul>
-                        <li><a href="profil.php">Profil</a></li>
+                        <li><a href="profil.php">Profil</a></li><hr>
                         <li><a href="logout.php">Déconnexion</a></li>
                     </ul>
+                    </div>
                 </div>
             <!-- sinon on afficher le lien pour se connecter !-->
             <?php else : ?>

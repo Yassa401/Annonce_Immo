@@ -132,7 +132,7 @@ session_start() ;
 
     </div>
 
-    <!-- <div class="main_img">
+    <div class="main_img">
         <?php 
         $query = "SELECT * FROM biens_immobiliers, images_biens_immobiliers, ville
                   WHERE biens_immobiliers.id = images_biens_immobiliers.id_bien
@@ -149,7 +149,6 @@ session_start() ;
             
             <img src=<?php echo "images_annonces/" . $resultat['nom_image'] ; ?> alt="image1"> 
             <div class="conten_haut">
-                <i class='bx bx-heart-circle'></i>
                 <div class="description">
                     <h4><?php echo $resultat['type'] ; ?></h4>
                     <p><?php echo $resultat['nom_ville'] ;?></p>
@@ -158,7 +157,7 @@ session_start() ;
         </div>
 
         <?php } ?>
-    </div> -->
+    </div>
 <section>
    <h2>Pourquoi Nous Choisir</h2>
    <div class="box">
