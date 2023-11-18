@@ -15,7 +15,7 @@
 header{
     margin: auto;
     width: 90%;
-    height: 85vh;
+    height: auto;
     transition: .3s linear;
     
 
@@ -164,7 +164,7 @@ h1#user::after {
 .contenu {
     position: relative;
     width: 100%;
-    height: 100%;
+    height: auto;
     z-index: 5;
 }
 
@@ -273,7 +273,7 @@ header .contenu .vers {
 
 
 .choix-client .btn_haut button{
-    padding: 15px 45pX;
+    padding: 15px 45px;
     background: #1f2e4a;
     color: white;
     border:none;
@@ -288,25 +288,13 @@ header .contenu .vers {
  }
 
 
- .btn_haut button:nth-child(1){
-    border-radius: 10px 0px 0px 0px;
-    background: #1f2e4a ;                     /*faire en sorte qu'il redevienne bleu quand on clique plus dessus*/
-    color: white;
+ .btn_haut button:nth-child(1), .btn_haut button:nth-child(2){
+   padding: 0.6em 1em; 
+   border-radius: 10px;
+   background: #363da6 ;                    /*faire en sorte qu'il redevienne bleu quand on clique plus dessus*/
+   color: white;
+   font-size: 18px;
  }
-
- .btn_haut button:nth-child(2){
-    border-radius: 10px 0px 0px 0px;     
-    background: #1f2e4a;
-    color: white;
- }
-
- .btn_haut button:nth-child(2){
-    border-radius: 0px 10px 0px 0px;
-    background: #1f2e4a;                  /*faire en sorte qu'il devienne blanc quand on clique dessus*/
-    color: white;
- }
-
-
 
 .parent {
    position: relative;
@@ -315,49 +303,51 @@ header .contenu .vers {
  .selection {
    
    width: 100%;
-   background: #fff;
+   background: transparent;
    border-radius: 0px 10px 10px 10px;
    padding: 1em ;
    box-shadow: 0px 5px 15px -6px rgb(49, 48, 48);
    z-index: 2;
    display: flex;
    flex-direction: column;
-   position: absolute;
+   position:relative;
    top: 3px;  
  } 
  
  /* ajuster la hauteur en fonction du contenu */
- .selection.auto-height{
-   height: auto;
-   max-height: 15em ; 
-   overflow-y: auto; 
-  
- }
- 
- 
+
+ .titre{
+   margin: 2em 0;
+   color: white;
+}
+
  .selection-info {
    flex-grow: 1;
+   overflow: auto;
+   display: flex;
+   margin: 0.5em;
  }
  
- .info .titre {
-   margin-top: 0;
-   margin-bottom: 0.5 em;  
+ .info{
+   margin: 0.5em;
+   padding: 1em 0 ;
+   display: flex;
+ }
+
+ .info input{
+   margin-left: 1em;
+   padding-left: 25px;
  }
  
- .loc,
- .type-biens,
- .budget, 
- .chambre,
- .surface
- {
-   margin-bottom: 6px;
+ .loc, .type-biens, .prix, .chambre, .surface{
+   font-size: 18px;
+   padding: 0 1em;
+   color : white;
+   height:22px;
+   margin-top:auto;
  }
  
-  .text1,
-  .text2,
-  .text3,
-  .text4,
-  .text5 {
+  .text1, .text2, .text3, .text4, .text5 {
     border: 1px solid #ccc;
     border-radius: 3px;
     width: auto;
@@ -366,10 +356,7 @@ header .contenu .vers {
     max-width: 100%; 
  }
                                      
- .type-biens,
- .budget,
- .surface,
- .chambre{
+ .type-biens, .budget, .surface, .chambre{
     margin-top: 20px;
  }
 

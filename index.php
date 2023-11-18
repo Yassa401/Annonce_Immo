@@ -67,19 +67,19 @@ session_start() ;
             </div>
 
         <form method="get">
-            <!-- <div class="choix-client">
-                <div class="btn_haut">
-                    <button type="button" id="acheter" onclick="boutonClique(this)" name="page" value="acheter" >Acheter</button>    
-                    <button type="button" id="louer" onclick="boutonClique(this)" name="page" value="louer">Louer</button>
-                    <input type="hidden" name="choix"  id="choix" value=""> 
-                </div>
-        <div class="parent">
-                <div class="selection auto-height">
-                  
-                
-                        <div class="info">
+            <div class="parent">
+                <div class="selection">
+                    
                             <h4 class="titre">Où Cherchez-Vous ?</h4>
-                            <h5 class="loc">LOCALITÉS</h5>
+                    
+                            <div class="btn_haut">
+                                <button type="button" id="acheter" onclick="boutonClique(this)" name="page" value="acheter" >Acheter</button>    
+                                <button type="button" id="louer" onclick="boutonClique(this)" name="page" value="louer">Louer</button>
+                                <input type="hidden" name="choix"  id="choix" value=""> 
+                            </div>  
+                        
+                    <div class="selection-info">
+                            <h5 class="loc">Localités</h5>
                             <?php 
                                 $pdo = connect() ;
                                 /* affiche tous les villes disponibles dans la base de données */
@@ -94,33 +94,30 @@ session_start() ;
                                 }
                             ?>
                             </select>
-                            <h5 class="type-biens">TYPE DE BIENS</h5>  
+                            <h5 class="type-biens">Type de Biens</h5>  
                             <select name="type" id="type">
                                 <option value="appartement">Appartement</option>
                                 <option value="maison">Maison</option>
                                 <option value="terrain">Terrain</option>
                                 <option value="parking">Parking</option>
                             </select><br><br> 
-                         </div>
+                    </div>
                         <div class="info"> 
-                             <h5 class="budget">BUDGET</h5>
-                            <input class="text3" type="text" name="prix_min" placeholder="Min"></input>
-                            <input class="text3" type="text" name="prix_max" placeholder="Max"></input>
-                        </div>
-                        <div class="info"> 
-                            <h5 class="surface">SURFACE</h5>
-                           <input class="text4" type="text" name="surface_min" placeholder="Min"></input>
-                           <input class="text4" type="text" name="surface_min" placeholder="Max"></input>
+                             <h5 class="prix">Prix</h5>
+                            <input class="text3" type="text" inputmode="numeric" name="prix_min" placeholder="Prix minimum"></input>
+                            <input class="text3" type="text" inputmode="numeric" name="prix_max" placeholder="Prix maximum"></input>
+                           <h5 class="surface">Surface</h5>
+                           <input class="text4" type="text" inputmode="numeric" name="surface_min" placeholder="Surface minimum"></input>
+                           <input class="text4" type="text" inputmode="numeric" name="surface_min" placeholder="Surface maximum"></input>
                        </div>
                         <div class="rechercher_btn">
-                             <i class='bx bx-search-alt'></i> 
-                            <button id="rech_btn" name="rech_btn" class="rechercher_btn" type="submit" value="rechercher"> Rechercher</button>
-                           
+                            <i class='bx bx-search-alt' style="color:white"></i><button id="rech_btn" name="rech_btn" class="rechercher_btn" type="submit" value="rechercher"> Rechercher</button>
                         </div>
-                
-            </div>  
-        </div> -->
+                    </div>  
+            </div>
         </form>
+        </div>
+        
     </header>
 
     <div class="main_bas"> 

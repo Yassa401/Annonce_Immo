@@ -55,7 +55,21 @@ userElement.addEventListener('click', () => {
 
 
 function boutonClique(bouton) {
-    document.getElementById('choix').value=bouton.id;
+    if(bouton.id == "acheter"){
+      document.getElementById(bouton.id).style.color = "#363da6";
+      document.getElementById(bouton.id).style.background = "white";
+      document.getElementById("louer").style.color = "white";
+      document.getElementById("louer").style.background = "#363da6";
+    }
+    else{
+      if(bouton.id == "louer"){
+        document.getElementById(bouton.id).style.color = "#363da6";
+        document.getElementById(bouton.id).style.background = "white";
+        document.getElementById("acheter").style.color = "white";
+        document.getElementById("acheter").style.background = "#363da6";
+      }
+    }
+      document.getElementById('choix').value=bouton.id;
     console.log("bouton cliqué") ;
 }
 
