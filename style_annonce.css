@@ -307,7 +307,7 @@ button {
   background-color: #007bff;
   color: white;
   padding: 10px;
-  border-radius: 5px;
+  border-radius: 3px;
   cursor: pointer;
 }
 
@@ -318,4 +318,38 @@ button {
 .infoFormulaire{
     margin: 1em;
     color: red;
+}
+
+#drop_menu_trie{
+    font-size: large;
+    color: inherit;
+}
+
+.resultats{
+    display: flex;
+    margin: 2em 1em ;
+}
+
+.resultats .trie{
+    padding-left: 4em;
+}
+
+.resultats .trie .trie_champ{
+    display: none;
+    position: absolute;
+    z-index: 5;
+    border: solid #000 3px;
+    border-radius: 5px;
+    width: 300px;
+    background-color: white;
+}
+
+.resultats .trie .trie_champ  #trie_champ_form {
+    padding: 0;
+    margin: 0;
+}
+
+.resultats .trie .trie_champ label{
+    padding-top: 5px;
+    padding-left: 1em; 
 }

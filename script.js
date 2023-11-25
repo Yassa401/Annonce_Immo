@@ -73,6 +73,22 @@ function boutonClique(bouton) {
     console.log("bouton cliqué") ;
 }
 
+function boutonTrie(bouton){
+  if(bouton.id == "drop_menu_trie"){
+    element = document.getElementById("trie_champ") ;
+    if(element.style.display == "none"){
+      element.style.display = "block";
+      elementform.style.display = "block";
+    }
+    else{
+      element.style.display = "none";
+    }  
+  }
+  if(bouton.name == "date"){
+    document.getElementById('champDate').value = document.getElementById(bouton.id).value;
+  }
+}
+
 function switchImage(){
     variable -= 1;
     if(variable < 0) {
