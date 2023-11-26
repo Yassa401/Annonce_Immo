@@ -26,6 +26,11 @@ header{
     background-color : whitesmoke ;
 }
 
+header img.logo{
+    background-blend-mode: color;
+    background: transparent ;
+ }
+
 header nav {
     margin: 1em auto;
     width:100%;
@@ -302,10 +307,9 @@ input[type="radio"] {
 }
 
 
-button {
+button, .resultats .trie .trie_champ .trie_rechercher_button{
   border: none;
   background-color: #007bff;
-  color: white;
   padding: 10px;
   border-radius: 3px;
   cursor: pointer;
@@ -352,4 +356,10 @@ button {
 .resultats .trie .trie_champ label{
     padding-top: 5px;
     padding-left: 1em; 
+}
+
+.resultats .trie .trie_champ .trie_rechercher_button{
+    margin : 5px ;
+    float : right;
+    color: inherit;
 }

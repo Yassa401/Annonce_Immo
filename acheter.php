@@ -21,8 +21,33 @@ session_start() ;
   <header>
     <?php include("header.php") ; ?>
   </header>
+    <div class="resultats">
+      <h1>Annonces biens à vendre : </h1>
 
-    <h1>Annonces biens à vendre : </h1>
+      <div class="trie">
+      
+        <button id="drop_menu_trie" onclick="boutonTrie(this)">trier par</button>
+        <div id="trie_champ" class="trie_champ">
+        <form id="trie_champ_form" method="post">
+          <!-- trie prix !-->
+          <label for="prix">Prix : - cher au + cher</label>
+          <input type="radio" id="prixAsc" name="prix" value="ASC">
+          <label for="prix">Prix : + cher au - cher</label>
+          <input type="radio" id="prixDesc" name="prix" value="DESC">
+          <!-- trie surface!-->
+          <label for="surface">Surface : + petit au + grand</label>
+          <input type="radio" id="surfaceAsc" name="surface" value="ASC">
+          <label for="surface">Surface : + grand au + petit</label>
+          <input type="radio" id="surfaceDesc" name="surface" value="DESC">
+          
+          <label for="rechercher"></label>
+          <input class="trie_rechercher_button" name="rechercher" type="submit" value="rechercher"> 
+        </form>
+        </div>
+        
+      </div>
+    
+    </div>
     <?php 
     $db = connect() ;
     if (isset($_GET) && count($_GET) > 0 ){
@@ -44,23 +69,68 @@ session_start() ;
             if (isset($_GET['surface_max']) && is_numeric($_GET['surface_max']))
                 $surface_max = intval($_GET['surface_max']) ;
         }
-
+        if(isset($_POST) && count($_POST) > 1){
+          $ordre = 0 ;
+          $query = "SELECT id_bien AS 'id' , prix, id_user, id_ville, surface, type, description 
+            FROM biens_achat, biens_immobiliers
+            WHERE biens_achat.id_bien = biens_immobiliers.id
+            AND biens_immobiliers.type LIKE :type
+            AND id_ville = :ville
+            AND prix >= :prix_min AND prix <= :prix_max
+            AND surface >= :surface_min AND surface <= :surface_max
+            ORDER BY" ;
+        if(isset($_POST['prix'])){
+          $prix = filter_input(INPUT_POST, "prix");
+          if($ordre != 0) // si ordre different de zero, un ordre est deja ajouté à la requete donc on ajoute une virgule
+            $query .= ",";
+          $query .= " prix " . $prix;
+          $ordre += 1;
+        }
+        if(isset($_POST['surface'])){
+          $surface = filter_input(INPUT_POST, "surface");
+          if($ordre != 0) // si ordre different de zero, un ordre est deja ajouté à la requete donc on ajoute une virgule
+            $query .= ",";
+            $query .= " surface " . $surface ;
+            $ordre += 1;
+        }    
+      }else{
+        $query = "SELECT id_bien AS 'id' , prix, id_user, id_ville, surface, type, description 
+            FROM biens_achat, biens_immobiliers
+            WHERE biens_achat.id_bien = biens_immobiliers.id
+            AND biens_immobiliers.type LIKE :type
+            AND id_ville = :ville
+            AND prix >= :prix_min AND prix <= :prix_max
+            AND surface >= :surface_min AND surface <= :surface_max" ;
+      }
+      $query = $db->prepare($query) ;
+      $query->execute([":type"=>$type, ':ville'=>$ville , ":prix_min"=>$prix_min, ":prix_max"=>$prix_max, ":surface_min"=> $surface_min, "surface_max"=> $surface_max]) ;
+    }
+    else{
+      if(isset($_POST) && count($_POST) > 1){
+        $ordre = 0;
         $query = "SELECT id_bien AS 'id' , prix, id_user, id_ville, surface, type, description 
                 FROM biens_achat, biens_immobiliers
                 WHERE biens_achat.id_bien = biens_immobiliers.id
-                AND biens_immobiliers.type LIKE :type
-                AND id_ville = :ville
-                AND prix >= :prix_min AND prix <= :prix_max
-                AND surface >= :surface_min AND surface <= :surface_max" ;
-    
-        $query = $db->prepare($query) ;
-        $query->execute([":type"=>$type, ':ville'=>$ville , ":prix_min"=>$prix_min, ":prix_max"=>$prix_max, ":surface_min"=> $surface_min, "surface_max"=> $surface_max]) ;    
-    }
-    else{
+                ORDER BY" ;
+        if(isset($_POST['prix'])){
+          $prix = filter_input(INPUT_POST, "prix");
+          if($ordre != 0) // si ordre different de zero, un ordre est deja ajouté à la requete donc on ajoute une virgule
+            $query .= ",";
+          $query .= " prix " . $prix;
+          $ordre += 1;
+        }
+        if(isset($_POST['surface'])){
+          $surface = filter_input(INPUT_POST, "surface");
+          if($ordre != 0) // si ordre different de zero, un ordre est deja ajouté à la requete donc on ajoute une virgule
+            $query .= ",";
+          $query .= " surface " . $surface ;
+          $ordre += 1;
+        }
+      }else{
         $query = "SELECT id_bien AS 'id' , prix, id_user, id_ville, surface, type, description 
                 FROM biens_achat, biens_immobiliers
                 WHERE biens_achat.id_bien = biens_immobiliers.id" ;
-    
+      }
         $query = $db->prepare($query) ;
         $query->execute() ;
     }

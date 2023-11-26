@@ -1,6 +1,8 @@
 
 <nav>
-    <a href="#" class="logo">ImmoHome </a>     
+    <a href="#">
+        <img class="logo" src="images/ImmoHomeLogo.jpg" alt="ImmoHome" height="60px" width="100%">
+    </a>     
     <div class="elements">
         <ul>
             <div class="btn_haut"><li><a href="ajout_annonce.php">Créer une annonce</a></li></div>
