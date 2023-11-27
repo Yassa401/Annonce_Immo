@@ -24,7 +24,7 @@ $submit1 = 0 ;
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
     <link rel="stylesheet" href="style_annonce.css">
-
+    <link rel="shortcut icon" href="images/ImmoHomeLogo.jpg">
     <title>ImmoHome</title>
 </head>
 <body>

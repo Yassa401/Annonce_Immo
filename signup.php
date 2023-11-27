@@ -70,8 +70,9 @@ session_start() ;
 <!DOCTYPE html>
 <html>
 <head>
-  <title>ImmoHome</title>
   <link rel="stylesheet" href="style_login.css">
+  <link rel="shortcut icon" href="images/ImmoHomeLogo.jpg">
+  <title>ImmoHome</title>
 </head>
 
 <body>
