@@ -8,7 +8,7 @@
     cursor: default;
 }
 :root {
-   --background: url(images/img_principale.jpg) no-repeat center/cover;
+   --background: url(images/img_principale.webp) no-repeat center/cover;
    max-width: 100% ;
 }
  

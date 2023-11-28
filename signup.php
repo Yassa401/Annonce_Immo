@@ -71,7 +71,7 @@ session_start() ;
 <html>
 <head>
   <link rel="stylesheet" href="style_login.css">
-  <link rel="shortcut icon" href="images/ImmoHomeLogo.jpg">
+  <link rel="shortcut icon" href="images/ImmoHomeLogo.webp">
   <title>ImmoHome</title>
 </head>
 

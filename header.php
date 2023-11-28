@@ -1,11 +1,11 @@
 
 <nav>
     <a href="#">
-        <img class="logo" src="images/ImmoHomeLogo.jpg" alt="ImmoHome" height="60px" width="100%">
+        <img class="logo" src="images/ImmoHomeLogo.webp" alt="ImmoHome" height="60px" width="100%">
     </a>     
     <div class="elements">
         <ul>
-            <div class="btn_haut"><li><a href="ajout_annonce.php">Créer une annonce</a></li></div>
+            <li><div class="btn_haut"><a href="ajout_annonce.php">Créer une annonce</a></div></li>
             <li><a href="index.php">ACCUEIL</a></li>
             <li><a href="acheter.php">ACHETER</a></li>
             <li><a href="louer.php">LOUER</a></li>
@@ -28,8 +28,8 @@
             <!-- sinon on afficher le lien pour se connecter !-->
             <?php else : ?>
                 <a href="login.php">
-                <i class='bx bx-user'></i>    
-                </a>
+                    <i class='bx bx-user'></i>
+                </a>    
             <?php endif ; ?>
         </div>
     </div>

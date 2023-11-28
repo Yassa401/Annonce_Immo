@@ -44,7 +44,7 @@ if(isset($_POST['submit']) && $_POST['submit'] == 'login'){
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="style_login.css">
-  <link rel="shortcut icon" href="images/ImmoHomeLogo.jpg">
+  <link rel="shortcut icon" href="images/ImmoHomeLogo.webp">
   <title>ImmoHome</title>
 </head>
 

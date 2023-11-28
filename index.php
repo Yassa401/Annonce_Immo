@@ -49,7 +49,7 @@ session_start() ;
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
     <link rel="stylesheet" href="style.css">
-    <link rel="shortcut icon" href="images/ImmoHomeLogo.jpg">
+    <link rel="shortcut icon" href="images/ImmoHomeLogo.webp">
     <title>ImmoHome</title>
 </head>
 
@@ -80,7 +80,7 @@ session_start() ;
                             </div>  
                         
                     <div class="selection-info">
-                            <h5 class="loc">Localités</h5>
+                            <h5 class="loc"><label for="ville">Localités</label></h5>
                             <?php 
                                 $pdo = connect() ;
                                 /* affiche tous les villes disponibles dans la base de données */
@@ -95,7 +95,7 @@ session_start() ;
                                 }
                             ?>
                             </select>
-                            <h5 class="type-biens">Type de Biens</h5>  
+                            <h5 class="type-biens"><label for="type">Type de Biens</label></h5>  
                             <select name="type" id="type">
                                 <option value="appartement">Appartement</option>
                                 <option value="maison">Maison</option>
@@ -160,7 +160,7 @@ session_start() ;
    <h2>Pourquoi Nous Choisir</h2>
    <div class="box">
         <div class="img_bx">
-              <img src="images/ste_img.png" alt="image de carte"> 
+              <img src="images/ste_img.webp" alt="image de carte"> 
     </div>
     <div class="cont_box">
         <h6><span>Notre devise</span></h6>
