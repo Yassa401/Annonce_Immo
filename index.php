@@ -163,15 +163,10 @@ session_start() ;
               <img src="images/ste_img.webp" alt="image de carte"> 
     </div>
     <div class="cont_box">
-        <h6><span>Notre devise</span></h6>
+        <h4><span>Notre devise</span></h4>
         <h1>Votre Confort <br> Notre TOP Priorité</h1>
-        <p>Pour acheter comme pour louer, nous nous sommes dit que la recherche immobilière était souvent compliquée. Après tout, trouver un logement, ce n’est pas juste trouver quatre murs, c’est aussi trouver la réponse à ses besoins et à son style de vie. C’est pour cette raison que nous avons décidé de créer ImmoHome, le premier moteur de recherche immobilière qui prend en compte le logement en lui-même mais aussi ses alentours avec la vie de quartier et les points d’intérêt à proximité.</p>
-        <ul>
-            <li>Temoignages Clients</li>
-            <li>Espace Presse</li>
-            <li>Alerte Mail</li>
-            <li>Nous Contacter</li>
-        </ul>
+        <p class="lead">Pour acheter comme pour louer, nous nous sommes dit que la recherche immobilière était souvent compliquée. Après tout, trouver un logement, ce n’est pas juste trouver quatre murs, c’est aussi trouver la réponse à ses besoins et à son style de vie. C’est pour cette raison que nous avons décidé de créer ImmoHome, le premier moteur de recherche immobilière qui prend en compte le logement en lui-même mais aussi ses alentours avec la vie de quartier et les points d’intérêt à proximité.</p>
+        
     </div>
 </div>
 

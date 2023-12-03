@@ -4,6 +4,11 @@ session_start();
 include('connexion.php');
 include('function.php');
 
+if (!isset($_SESSION['user_id'])){
+  header('Location: login.php') ;
+  die ;
+}
+
 $user_data = check_login() ;
 
 $user_id = $user_data["id"] ;

@@ -537,15 +537,15 @@ section .box {
    align-items: flex-start;
 }
 
- .cont_box h6 {
+ .cont_box h4 {
    position: relative;
 }
 
- .cont_box h6 span {
+ .cont_box h4 span {
    margin-left: 25px;
 }
 
- .cont_box h6::before {
+ .cont_box h4::before {
    content: '';
    position: absolute;
    width: 20px;
@@ -560,7 +560,8 @@ section .box {
 }
 
 .cont_box p {
-   font-size: 12px;
+   font-size:calc(1.2713rem);
+   font-weight:400;
 }
 
  .cont_box ul {
@@ -603,7 +604,12 @@ footer {
 
 footer h4 {
    color: #fff;
+   font-size: 1.65rem;
+   margin-top: 0;
+   margin-bottom: .5rem;
+   font-weight: 500;
+   line-height: 1.2;
 }
-footer h4 .bi {
+footer h4 i {
    margin-right: 5px;
 } 

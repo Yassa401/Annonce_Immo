@@ -9,7 +9,7 @@
             <li><a href="index.php">ACCUEIL</a></li>
             <li><a href="acheter.php">ACHETER</a></li>
             <li><a href="louer.php">LOUER</a></li>
-            <li><a href="#actualite">ACTUALITES</a></li> 
+            <li><a href="actualites.php">ACTUALITES</a></li> 
         </ul>
         <div class="account">
             <!-- si utilisateur connecté on affiche son nom et le lien pour se déconnecter !-->
